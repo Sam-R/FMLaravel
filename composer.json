@@ -17,29 +17,18 @@
 	],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "5.4.*",
-        "illuminate/database": "5.4.*",
+        "andrewmile/fm-hash": "0.1.*",
         "andrewmile/fm-api": "0.1.2"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2.0",
-		"squizlabs/php_codesniffer": "^2.6",
-		"phpunit/phpunit": "^5.3"
+        "phpspec/phpspec": "~2.0"
     },
     "autoload": {
-	    "psr-0": {
-			"": "src/"
-		}
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"scripts": {
-		"test": [
-			"@test-phpunit",
-			"@test-psr2"
-		],
-		"test-psr2": "phpcs --standard=PSR2 src",
-		"test-phpunit": "phpunit tests"
-	}
+        "psr-0": {
+            "": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
 }
