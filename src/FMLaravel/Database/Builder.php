@@ -25,4 +25,17 @@ class Builder extends EloquentBuilder
 
         return $this;
     }
+
+    /**
+    * Get the hydrated models without eager loading.
+    *
+    * @param  array  $columns
+    * @return \Illuminate\Database\Eloquent\Model[]
+    */
+    public function getModels($columns = ['*'])
+    {
+        return $this->model->hydrate(
+            $this->query->get($columns)
+        )->all();
+    }
 }
